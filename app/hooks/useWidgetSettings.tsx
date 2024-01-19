@@ -35,6 +35,7 @@ export const useWidgetSettings = (
 
   useEffect(() => {
     fetch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // ------------- helper functions ------------- //

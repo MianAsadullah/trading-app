@@ -28,6 +28,7 @@ export default function Quote({ wid }: Props) {
 
   useEffect(() => {
     fetchDebounced();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

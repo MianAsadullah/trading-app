@@ -21,6 +21,7 @@ export default function Clock({ title, hourDiff }: Props) {
     return () => {
       clearInterval(clockInterval);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function handleDate() {

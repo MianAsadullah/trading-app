@@ -44,6 +44,7 @@ export default function Note({ wid }: Props) {
       // console.log('reset skipSaving', skipSaving);
       setTimeout(() => setSkipSaving(false), 200);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [debouncedText]);
 
   const onChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {

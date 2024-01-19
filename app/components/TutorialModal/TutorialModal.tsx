@@ -1,5 +1,6 @@
 import { useRouter } from "next/navigation";
 import { Modal } from "../base";
+import Image from "next/image";
 
 type Props = {
   onConfirm: () => void;
@@ -12,7 +13,7 @@ export default function TutorialModal({ onConfirm }: Props) {
       bodyClassName="!max-w-[800px]"
       content={
         <div className="flex flex-col gap-2">
-          <img src="/demo-02.gif" alt="Tutorial Screenshot" />
+          <Image src="/demo-02.gif" alt="Tutorial Screenshot" />
 
           {/* <a
             className="link-minor"

@@ -93,6 +93,7 @@ export default function MainPage() {
       }, 10);
     };
     fetchUserSettings();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   // console.log('isReady', isReady, userWidgets, layout);
 
@@ -372,7 +373,7 @@ export default function MainPage() {
                   className="link-minor underline"
                   onClick={() => publish(PubSubEvent.Moving, { stop: true })}
                 >
-                  I'm done moving
+                  I&apos;m done moving
                 </span>
               </div>
             </>

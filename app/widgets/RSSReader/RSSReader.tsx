@@ -2,9 +2,9 @@ import json from "./RSSReader.json";
 import Widget from "../../components/widget/widget";
 import { useEffect, useState } from "react";
 import { apiGet } from "../../utils/apiUtils";
-import { FiRefreshCcw } from "react-icons/fi";
 import _ from "lodash";
 import { useWidgetSettings } from "../../hooks/useWidgetSettings";
+import Image from "next/image";
 
 type Props = {
   wid: string;
@@ -47,6 +47,7 @@ export default function RSSReader({ wid }: Props) {
 
   useEffect(() => {
     fetchDebounced();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);
 
   return (
@@ -81,9 +82,10 @@ export default function RSSReader({ wid }: Props) {
                         target="_blank"
                       >
                         {imgUrl && (
-                          <img
+                          <Image
                             src={imgUrl}
                             className="min-w-[100px] h-14 mt-1"
+                            alt={""}
                           />
                         )}
                         <span className="text-gray-500 hover:text-gray-800 cursor-pointer">

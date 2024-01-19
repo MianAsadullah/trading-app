@@ -7,6 +7,7 @@ import { useState } from "react";
 import TutorialModal from "./TutorialModal/TutorialModal";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 type BaseProps = {
   children?: any;
@@ -72,7 +73,7 @@ export default function AppHeader() {
         onClick={() => navigate.push("/")}
       >
         <span className="text-3xl ml-2 mr-2 lg:block hidden">
-          <img src="/logo.png" className="w-8" />
+          <Image src="/logo.png" className="w-8" alt={""} />
         </span>{" "}
         Dashb
         <span className="text-gray-300">.io</span>
