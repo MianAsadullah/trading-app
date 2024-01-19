@@ -161,7 +161,7 @@ export default function MainPage() {
           // only save layout when moving widgets
           saveTabLS(tab, userWidgets, currentLayout);
           saveTabDB(tab, userWidgets, currentLayout);
-          localStorage.setItem(
+          window?.localStorage.setItem(
             `userLayout${tab}${currentBreakpoint}`,
             JSON.stringify(currentLayout)
           );

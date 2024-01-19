@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }: any) => {
 
   // const [authed, setAuthed] = useState<boolean>(sessionStorageValue);
   const [user, setUser] = useState<User | null>(
-    localStorage.getItem("user")
+    window.localStorage.getItem("user")
       ? (JSON.parse(`${localStorage.getItem("user")}`) as User)
       : null
   );
