@@ -95,7 +95,7 @@ export default function Widget({
           if (timer) {
             clearTimeout(timer);
           }
-          setTimer(setTimeout(() => setMoverShowed(false), 3000));
+          setTimer(setTimeout(() => setMoverShowed(false), 3000) as any);
         }}
       >
         {moverShowed && <MoverIcon />}

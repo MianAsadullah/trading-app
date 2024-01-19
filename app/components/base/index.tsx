@@ -267,6 +267,7 @@ export const Modal = ({
     };
     window.addEventListener("keydown", closeOnEsc); // add the keyboard listener
     return () => window.removeEventListener("keydown", closeOnEsc);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // re-run the effect whenever isOpen or onClose changes
 
   return (
@@ -372,6 +373,7 @@ export const Toast = ({
       );
     }
     return () => clearTimeout(timerRef.current);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -516,6 +518,7 @@ export const SearchInput = ({
   const debouncedText = useDebounce(text, debounceMs);
   useEffect(() => {
     onSearch && onSearch(debouncedText);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [debouncedText]);
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setText(event.target.value);

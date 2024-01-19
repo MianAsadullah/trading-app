@@ -20,6 +20,7 @@ export const useSub = (event: string, callback: any) => {
   useEffect(() => {
     emitter.on(event, callback);
     return unsubscribe;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return unsubscribe;

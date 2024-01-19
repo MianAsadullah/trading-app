@@ -176,6 +176,7 @@ export default function TogglProjectBarChart({ wid }: Props) {
     // });
     fetchDataDebounced();
     // }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [err]);
 
   const minutesToHoursMinutes = (minutes: number) => {

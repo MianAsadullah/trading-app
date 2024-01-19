@@ -14,10 +14,10 @@ type Props = {
 export default function StockChart({ wid, symbol }: Props) {
   const [currentSymbol, setCurrentSymbol] = useState(symbol);
   const [theme, setTheme] = useState(
-    localStorage.getItem("nightwind-mode") ?? "dark"
+    window?.localStorage.getItem("nightwind-mode") ?? "dark"
   );
   useSub(PubSubEvent.ThemeChange, () => {
-    setTheme(localStorage.getItem("nightwind-mode") ?? "dark");
+    setTheme(window?.localStorage.getItem("nightwind-mode") ?? "dark");
   });
 
   // memo: to avoid re-rendering (when moving widget)

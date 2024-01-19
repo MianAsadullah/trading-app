@@ -16,7 +16,7 @@ export default function WidgetSettingsTutorial() {
       <>
         <button
           onClick={() => {
-            localStorage.setItem("settingIconTutorialShowed", "true");
+            window?.localStorage.setItem("settingIconTutorialShowed", "true");
             setSettingIconTutorialShowed(false);
           }}
         >

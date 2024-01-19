@@ -1,7 +1,7 @@
 import { WidgetHeight } from "./constants";
 
 export function getLS(key: string, defaultValue: any, parseJson = false) {
-  let value = localStorage.getItem(key);
+  let value = window?.localStorage.getItem(key);
   if (value === "undefined") {
     return defaultValue; // unusual case
   }
@@ -21,7 +21,7 @@ export function getLS(key: string, defaultValue: any, parseJson = false) {
 }
 
 export function logOut() {
-  localStorage.removeItem("tk");
+  window?.localStorage.removeItem("tk");
   window.location.reload(); // log out
 }
 
